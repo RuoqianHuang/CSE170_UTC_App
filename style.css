@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f1f1;
+    overflow: scroll;
+    z-index: 0;
+    padding-top: 15%;
+    padding-bottom: 33%;
+  }
+  
+  header {
+    background-color: #2DE3BB;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    position: fixed;
+    width: 95%;
+    z-index: 1000;
+    top: 0;
+  }
+  
+  .circle {
+    width: 2em;
+    height: 2em;
+    background-color: #2D96E3;
+    border-radius: 50%;
+  }
+  
+  h1 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .scan-icon {
+    width: 2em;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+  }
+  
+  button {
+    background-color: #2DE640;
+    color: #fff;
+    padding: 3% 9%;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+  }
+  
+  .selected-button {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .image-container {
+    text-align: center;
+    margin: 18% 3%;
+  }
+  
+  #displayedImage {
+    max-width: 100%;
+  }
+  
+  .bottom-navigation {
+    background-color: #2DE37D;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    padding: 3%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .action {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .action img {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+/* Dropdown Content (Initially hidden) */
+  .dropdown-content {
+    display: none;
+  }
+  
+  /* Style for Menu and Activities items */
+  .menu-item,
+  .activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .menu-item img,
+  .activity-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .menu-info,
+  .activity-info {
+    flex-grow: 1;
+  }
+
+  .drop-icon {
+    width: 20px;
+  }
+
+  .circle-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: #2D96E3;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.circle-arrow::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.music-icons {
+    width: 5%;
+    height: 5%;
+}
+  
+.dialog-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(103, 146, 158, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.dialog-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+  
+.schedule {
+  margin-left: 15px;
+}
+
+.activity-item {
+  margin-left: 10px;
+}
+
+.instruction {
+  margin-left: 15px;
+  color: #14b65a;
+}
+
+#thanksDialog {
+  display: none;
+}

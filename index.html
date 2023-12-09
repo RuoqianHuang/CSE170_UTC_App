@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>App Screen</title>
+</head>
+<body>
+  <header>
+    <div class="circle"></div>
+    <h1>UTC</h1>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/scan-icon.png" alt="Scan Icon" class="scan-icon" onclick="goToWiki()">
+  </header>
+
+  <div class="buttons">
+    <button onclick="switchImage('general')" class="selected-button">General</button>
+    <button onclick="switchImage('detailed')">Detailed</button>
+  </div>
+
+  <div class="image-container">
+    <img id="displayedImage" src="https://i.pinimg.com/originals/de/71/df/de71df345035c30d2830fef4ae4c562e.gif" alt="Displayed Image">
+  </div>
+
+  <nav class="bottom-navigation">
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/food-and-drinks/meal-food-icon.png" alt="Eat" onclick="goToWiki()">
+      <p>Eat</p>
+    </div>
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/music-icon.png" alt="Music" onclick="goToMusicScreen()">
+      <p>Music</p>
+    </div>
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/banking-finance/saving-icon.png" alt="Rent" onclick="goToWiki()">
+      <p>Rent</p>
+    </div>
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/more-options-ellipsis-icon.png" alt="Other" onclick="goToWiki()">
+      <p>Other</p>
+    </div>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

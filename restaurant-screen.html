@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="circle-arrow" onclick="goToHomepage()"></div>
+    <h1>Restaurant</h1>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/scan-icon.png" alt="Scan Icon" class="scan-icon">
+  </header>
+
+  <section class="introduction">
+    <img src="introduction-image.jpg" alt="Introduction Image">
+    <p>Welcome to our restaurant! Enjoy a delightful dining experience with us.</p>
+  </section>
+
+  <section class="menu">
+    <h2>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/angle-circle-down-icon.png" alt="Dropdown Icon" class = "drop-icon" onclick="toggleDropdown('menu')">
+      Menu
+    </h2>
+    <div id="menu-list" class="dropdown-content">
+      <!-- Example Dishes -->
+      <div class="menu-item">
+        <img src="dish1.jpg" alt="Dish 1">
+        <div class="menu-info">
+          <p>Delicious Dish 1</p>
+          <p>Brief introduction to Dish 1.</p>
+          <p>$19.99</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="dish2.jpg" alt="Dish 2">
+        <div class="menu-info">
+          <p>Scrumptious Dish 2</p>
+          <p>Brief introduction to Dish 2.</p>
+          <p>$24.99</p>
+        </div>
+      </div>
+      <!-- Add more menu items as needed -->
+    </div>
+  </section>
+
+  <section class="activities">
+    <h2>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/angle-circle-down-icon.png" alt="Dropdown Icon" class = "drop-icon" onclick="toggleDropdown('activities')">
+      Activities
+    </h2>
+    <div id="activities-list" class="dropdown-content">
+      <!-- Activities List -->
+      <div class="activity-item">
+        <div class="activity-info">
+          <p>Exciting Activity 1</p>
+          <p>Brief introduction to Activity 1.</p>
+        </div>
+        <img src="activity1.jpg" alt="Activity 1">
+      </div>
+      <div class="activity-item">
+        <div class="activity-info">
+          <p>Fun Activity 2</p>
+          <p>Brief introduction to Activity 2.</p>
+        </div>
+        <img src="activity2.jpg" alt="Activity 2">
+      </div>
+      <!-- Add more activities as needed -->
+    </div>
+  </section>
+
+  <nav class="bottom-navigation">
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/check-location-icon.png" alt="Check-in">
+      <p>Check-in</p>
+    </div>
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/food-and-drinks/catering-icon.png" alt="Order">
+      <p>Order</p>
+    </div>
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/speech-bubble-line-icon.png" alt="Comment">
+      <p>Comment</p>
+    </div>
+    <div class="action">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/relationship-love/heart-thin-icon.png" alt="Like">
+      <p>Like</p>
+    </div>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

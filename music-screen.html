@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="circle-arrow" onclick="goToHomepage()"></div>
+    <h1>Music</h1>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/scan-icon.png" alt="Scan Icon" class="scan-icon"  onclick="goToWiki()">
+  </header>
+
+  <section class="schedule">
+    <h2>Today's BGM Schedule</h2>
+  </section>
+
+  <div class="activity-item">
+    <div class="activity-info">
+      <p>10:00 a.m. - 12:00 p.m.</p>
+      <p>Zone Green</p>
+    </div>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/weather/thunder-icon.png" alt="Activity 1">
+  </div>
+  <div class="activity-item">
+    <div class="activity-info">
+      <p>12:00 p.m. - 2:00 p.m.</p>
+      <p>Zone Red</p>
+    </div>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/guitar-icon.png" alt="Activity 2">
+  </div>
+  <div class="activity-item">
+    <div class="activity-info">
+      <p>2:00 p.m. - 4:00 p.m.</p>
+      <p>Zone Yellow</p>
+    </div>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/keyboard-piano-icon.png" alt="Activity 3">
+  </div>
+  <div class="activity-item">
+    <div class="activity-info">
+      <p>4:00 p.m. - 6:00 p.m.</p>
+      <p>Zone Pink</p>
+    </div>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/weather/thunder-icon.png" alt="Activity 4">
+  </div>
+  <div class="activity-item">
+    <div class="activity-info">
+      <p>6:00 p.m. - 9:00 p.m.</p>
+      <p>Zone Orange</p>
+    </div>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/keyboard-piano-icon.png" alt="Activity 5">
+  </div>
+
+  <p class="instruction">Vote your favorite music genre below! <br> One vote per week.<br> Your choice may be reflected in later schedules!</p>
+  
+  <nav class="bottom-navigation">
+    <div class="action">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/weather/thunder-icon.png" alt="Icon 1" onclick = "showDialog()">
+        <p>EDM</p>
+      </div>
+      <div class="action">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/guitar-icon.png" alt="Icon 2" onclick = "showDialog()">
+        <p>Acoustic</p>
+      </div>
+      <div class="action">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/keyboard-piano-icon.png" alt="Icon 3" onclick = "showDialog()">
+        <p>Classic</p>
+      </div>
+      <div class="action">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/more-options-ellipsis-icon.png" alt="More" id="moreIcon" onclick="toggleIcons()">
+        <p>More</p>
+      </div>
+  </nav>
+
+  <div class="dialog-overlay" id="dialogOverlay">
+    <div class="dialog-box" id="confirmationDialog">
+      <span class="close-btn" onclick="closeDialog()">&times;</span>
+      <p>Do you want to confirm your vote?</p>
+      <div class="buttons">
+        <button onclick="confirmVote('yes')">Yes</button>
+        <button onclick="closeDialog()">No</button>
+      </div>
+    </div>
+  
+    <div class="dialog-box" id="thanksDialog">
+      <span class="close-btn" onclick="closeDialog()">&times;</span>
+      <p>Thanks for voting!</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

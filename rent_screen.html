@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent Screen</title>
+  <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #2DE3BB;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 0;
+        color: #fff;
+    }
+
+    .bottom-navigation {
+        background-color: #2DE37D;
+        
+        justify-content: space-around;
+        
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .action {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .circle-arrow {
+        width: 30px;
+        height: 30px;
+        background-color: #2D96E3;
+        border-radius: 50%;
+        transform: rotate(-45deg);
+        cursor: pointer;
+    }
+
+    .circle-arrow::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    h1 {
+        margin: 0;
+        color: #fff;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+        align-items: center;
+        
+    }
+
+    button {
+        background-color: transparent;
+        border-radius: 5%;
+        border-color: #2DE37D;
+        cursor: pointer;
+        padding: 30px;
+        width: 150px;
+        height: 150px;
+    }
+
+    button img {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: auto;
+    }
+
+    .scan-icon {
+        width: 30px;
+    }
+    
+    .dialog-box {
+        margin-left: 5%;
+        font-size: large;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="circle-arrow" onclick="goToHomepage()"></div>
+    <h1>Rent</h1>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/scan-icon.png" alt="Scan Icon" class="scan-icon">
+  </header>
+
+  <div class="dialog-box">
+    <p>What do you want?</p>
+  </div>
+
+  <div class="buttons">
+    <button>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlScja0bIfr0fEi2lR9vT5YnYnL6x4hMk9nQ&usqp=CAU" alt="Portable Fan">
+      <p>Portable fan</p>
+    </button>
+    <button>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWWC5OFsS1QmagOlulg7JMmtSCJMiqGNpDBg&usqp=CAU" alt="Headphone">
+      <p>Headphone</p>
+    </button>
+    <button>
+      <img src="data:image/jpeg;base64,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" alt="Umbrella">
+      <p>Umbrella</p>
+    </button>
+  </div>
+
+  <nav class="bottom-navigation">
+    <div class="action">
+        <p>Return</p>
+    </div>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
