@@ -67,7 +67,6 @@ function goToRentScreen() {
     window.location.href = 'music-screen.html';
   }
 
-// Add the following script to the existing JavaScript file
     let isOtherIconSet = false;
 
     function toggleIcons() {
